@@ -1,10 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
+  <head>
+    <title>Welcome to Spin the Wheel</title>
+    <meta charset="UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
 
-<h1>My First Heading</h1>
+  <body>
+    <div id="spin_the_wheel">
+      <canvas id="wheel" width="800" height="800"></canvas>
+      <div id="spin">SPIN</div>
+    </div>
 
-<p>My first paragraph.</p>
+    <div id="sector_form">
+      <h2>Manage Sectors</h2>
+      <form id="add_sector_form">
+        <input type="text" id="sector_label" placeholder="Label" required />
+        <input type="color" id="sector_color" value="#FFBC03" required />
+        <input type="color" id="sector_text_color" value="#333333" required />
+        <button type="submit">Add Sector</button>
+      </form>
+      <ul id="sector_list"></ul>
+    </div>
 
-</body>
+    <script defer src="src/index.js"></script>
+
+  </body>
 </html>
